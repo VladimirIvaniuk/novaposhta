@@ -9,28 +9,28 @@ $this->title = 'Расчет стоимости доставки';
 ?>
 <?php $form=ActiveForm::begin()?>
 <div class="site-index">
-    Отпровитель
+    <h3>Отпровитель</h3>
     <br>
-        <select name="sender_cities" size="1" class="sender_cities">
+        <select name="sender_cities" size="1" class="form-control sender_cities">
             <option value="0">--Выбрать город--</option>
             <?php foreach ($cities['data'] as $city) :?>
                 <option value="<?=$city['Ref']?>"><?=$city['DescriptionRu']?></option>
             <?php endforeach;?>
         </select>
-        <select name="warehouses" size="1" class="warehouses">
+        <select name="warehouses" size="1" class="form-control warehouses">
             <option value="0">--Выбрать отделение--</option>
         </select>
         <br>
         <br>
-    Получатель
+    <h3>Получатель</h3>
         <br>
-            <select name="recipient_city" size="1" class="recipient_city">
+            <select name="recipient_city" size="1" class="form-control recipient_city">
                 <option value="0">--Выбрать город--</option>
                 <?php foreach ($cities['data'] as $city) :?>
                     <option value="<?=$city['Ref']?>"><?=$city['DescriptionRu']?></option>
                 <?php endforeach;?>
             </select>
-            <select name="warehouses2" size="1" class="warehouses2">
+            <select name="warehouses2" size="1" class="form-control warehouses2">
                 <option value="0">--Выбрать отделение--</option>
             </select>
         <br>
